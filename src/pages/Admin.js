@@ -7,7 +7,8 @@ import { useAuth } from '../context/AuthContext';
 import './Admin.css';
 
 export default function Admin() {
-  const { appointments, createAppointment, updateAppointment, deleteAppointment, getAppointmentsByDate } = useAppointments();
+  const { appointments = [], createAppointment, updateAppointment, deleteAppointment } = useAppointments();
+
   const { users } = useAuth();
 
   const [selectedDate, setSelectedDate] = useState(new Date());

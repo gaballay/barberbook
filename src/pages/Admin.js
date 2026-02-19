@@ -90,7 +90,7 @@ export default function Admin() {
             <span className="stat-l">Hoy</span>
           </div>
           <div className="stat">
-            <span className="stat-n">{users.filter(u => u.role !== 'admin').length}</span>
+            <span className="stat-n">{(users || []).filter(u => u.role !== 'admin').length}</span>
             <span className="stat-l">Clientes</span>
           </div>
         </div>

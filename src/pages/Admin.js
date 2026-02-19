@@ -8,6 +8,7 @@ import './Admin.css';
 
 export default function Admin() {
   const { appointments = [], createAppointment, updateAppointment, deleteAppointment } = useAppointments();
+  console.log('appointments:', appointments);
 
   const { users } = useAuth();
 

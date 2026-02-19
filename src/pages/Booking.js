@@ -32,8 +32,7 @@ export default function Booking() {
     setLoading(true);
     const dateKey = format(selectedDate, 'yyyy-MM-dd');
     const service = SERVICES.find(s => s.id === selectedService);
-
-    const appt = createAppointment({
+    const appt = await createAppointment({
       userId: user.id,
       userName: user.name,
       userEmail: user.email,
@@ -44,7 +43,6 @@ export default function Booking() {
       price: service.price,
       status: 'confirmed',
     });
-
     await sendConfirmationEmail({
       userName: user.name,
       userEmail: user.email,
@@ -53,7 +51,6 @@ export default function Booking() {
       time: selectedTime,
       appointmentId: appt.id,
     });
-
     setConfirmedAppt(appt);
     setStep(3);
     setLoading(false);

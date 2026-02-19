@@ -77,7 +77,15 @@ export function AppointmentsProvider({ children }) {
 
     if (error) { console.error(error); return null; }
     await fetchAppointments();
-    return { ...appt, id: data.id };
+    return { 
+  ...appt, 
+  id: data.id,
+  serviceId: appt.serviceId,
+  serviceName: appt.serviceName,
+  date: appt.date,
+  time: appt.time,
+  price: appt.price
+
   };
 
   const updateAppointment = async (id, updates) => {

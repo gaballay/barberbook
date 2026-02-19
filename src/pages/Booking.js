@@ -93,7 +93,7 @@ export default function Booking() {
                 </div>
                 <div className="summary-row">
                   <span>Fecha</span>
-                  <strong>{confirmedAppt && format(new Date(confirmedAppt.date + 'T00:00:00'), "EEEE d 'de' MMMM", { locale: es })}</strong>
+                  <strong>{confirmedAppt && confirmedAppt.date ? format(new Date(confirmedAppt.date + 'T00:00:00'), "EEEE d 'de' MMMM", { locale: es }) : ''}</strong>
                 </div>
                 <div className="summary-row">
                   <span>Hora</span>

@@ -7,9 +7,9 @@
 // 4. Reemplazá las constantes de abajo con tus credenciales
 // ============================================================
 
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';      // ej: 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';    // ej: 'template_xyz789'
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';       // ej: 'aBcDeFgHiJkLmNoP'
+const EMAILJS_SERVICE_ID = 'barberbook_service';
+const EMAILJS_TEMPLATE_ID = 'template_o3t0czw';
+const EMAILJS_PUBLIC_KEY = 'L31pA0MfGZyK_iupA';
 
 export const sendConfirmationEmail = async ({ userName, userEmail, service, date, time, appointmentId }) => {
   // Si no configuraste EmailJS, solo logueamos en consola

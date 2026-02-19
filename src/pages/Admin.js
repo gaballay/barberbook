@@ -17,7 +17,11 @@ export default function Admin() {
   const [formData, setFormData] = useState({});
   const [filterDate, setFilterDate] = useState('');
 
-  const dateAppts = getAppointmentsByDate(format(selectedDate, 'yyyy-MM-dd'));
+  
+  const getAppointmentsByDate = (date) => {
+  return appointments.filter(a => a.date === date && a.status !== 'cancelled');
+};
+const dateAppts = getAppointmentsByDate(format(selectedDate, 'yyyy-MM-dd'));
   const allActive = (appointments || []).filter(a => a.status !== 'cancelled');
 
   const openCreate = () => {
